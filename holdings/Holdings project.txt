@@ -1,0 +1,29 @@
+Holdings project
+
+DROP TABLE holdings_qty;
+CREATE TABLE  holdings_qty (
+  `Scrip` VARCHAR(45) NOT NULL,
+  `Client` VARCHAR(45) NOT NULL,
+  `Name` VARCHAR(45) NULL,
+  `ISIN` VARCHAR(45) NOT NULL,
+  `Collateral` INT NULL,
+  `Depository` INT NULL,
+  `Net` INT NULL,
+  `Cl_Price` INT NULL,
+  `Cl_Amount` INT NULL,
+  PRIMARY KEY (`Scrip`,`ISIN`, `Client`));
+
+SELECT * FROM holdings_qty
+WHERE Cl_Price = 0;
+DROP TABLE holdings_buy;
+CREATE TABLE holdings_buy (
+  `Script`VARCHAR(45) NOT NULL,
+  `ISIN` VARCHAR(45) NOT NULL,
+  `Name` VARCHAR(45) NULL,
+  `Net` INT NOT NULL,
+  `Buy_Price` INT NULL,
+  `Cl_Price` INT NULL,
+  PRIMARY KEY (`Script`,`ISIN`, `Net`));
+
+SELECT * FROM holdings_buy;
+  

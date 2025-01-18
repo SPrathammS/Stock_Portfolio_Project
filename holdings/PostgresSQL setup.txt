@@ -1,0 +1,5 @@
+PostgresSQL setup
+
+password: SQLalternative
+5432
+postgres
